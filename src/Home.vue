@@ -20,7 +20,7 @@ export default {
   created() {
     setTimeout(() => {
       this.loading = false;
-    }, 3000);
+    }, 2900);
   },
 
   data() {
@@ -55,10 +55,10 @@ export default {
 /***SPINNER HEART STYLE***/
 .spinner-heart {
   position: absolute;
-  height: 36px;
-  width: 36px;
-  top: calc(50% - 18px);
-  left: calc(50% - 18px);
+  height: 48px;
+  width: 48px;
+  top: calc(50% - 24px);
+  left: calc(50% - 24px);
   transform: rotate(45deg);
   background-color: #e06666;
   animation-name: spinner-heart;
@@ -71,18 +71,18 @@ content: '';
 display: block;
 position: absolute;
 box-sizing: border-box;
-height: 36px;
-width: 36px;
+height: 48px;
+width: 48px;
 border-radius: 50%;
 background-color: #e06666;
 }
   
 .spinner-heart::before {
-left: -20px;
+left: -25px;
 }
 
 .spinner-heart::after {
-top: -20px;
+top: -25px;
 }
 
 @keyframes spinner-heart {
