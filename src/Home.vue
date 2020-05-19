@@ -1,7 +1,14 @@
 <template>
     <div class="home"> 
-        <Navbar/>
-        <p>Hi there</p>
+        <div v-if="loading">
+            <div class="spinner-wrapper">
+                <div class="spinner-heart"></div>  
+            </div>
+        </div>
+        <div v-else class="container">
+            <Navbar />
+            <h1>HOMEHOME</h1>
+        </div>
     </div>
 </template>
 
@@ -10,15 +17,15 @@ import Navbar from './components/Navbar.vue'
 
 export default {
   name: 'Home',
-  //created() {
-   // setTimeout(() => {
-   //   this.loading = false;
-   // }, 2400);
-  //},
+  created() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 3000);
+  },
 
   data() {
     return {
-          //loading: true
+          loading: true
       }      
   },
   
@@ -43,4 +50,57 @@ export default {
     margin-left: auto;
     margin-right: auto;
 }
+
+
+/***SPINNER HEART STYLE***/
+.spinner-heart {
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  top: calc(50% - 18px);
+  left: calc(50% - 18px);
+  transform: rotate(45deg);
+  background-color: #e06666;
+  animation-name: spinner-heart;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
+
+.spinner-heart::before, .spinner-heart::after {
+content: '';
+display: block;
+position: absolute;
+box-sizing: border-box;
+height: 36px;
+width: 36px;
+border-radius: 50%;
+background-color: #e06666;
+}
+  
+.spinner-heart::before {
+left: -20px;
+}
+
+.spinner-heart::after {
+top: -20px;
+}
+
+@keyframes spinner-heart {
+  0% {
+    transform: rotate(45deg) scale(1);
+  }
+  35% {
+    transform: rotate(50deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(45deg) scale(1);
+  }
+  60% {
+    transform: rotate(38deg) scale(1.25);
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+  }
+}
+
 </style>
