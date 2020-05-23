@@ -36,6 +36,14 @@ export default {
 </script>
 
 <style>
+
+* {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+}
 #home {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
