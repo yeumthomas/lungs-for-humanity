@@ -1,35 +1,39 @@
 <template>
-    <div container> 
+    <div class="apollobvm">
         <Navbar/>
-        <h1>Why is Rice University's ApolloBVM ventilator our best bet?</h1>
-        <figure>
-            <img :src="venti" class="venti"/>
-            <figcaption>early prototype sketch @Claire Xu</figcaption>
-        </figure>
-        <h4>Unsustainable Situations</h4>
-        <p>The country is currently facing a severe shortage of ventilators, a problem that is expected 
-            to escalate as the virus continues to spread and peak in different states across the country. 
-            The Society of Critical Care Medicine has projected that 960,000 Covid-19 patients in the U.S. 
-            may need to be put on ventilators at one point, but the nation has only about 200,000 of these 
-            machines (many of which are older models). The wide gap between supply and demand is already forcing 
-            doctors to choose which patients they can try to save.</p>
-        <h4>The Solution</h4>
-        <p>The ApolloBVM could be a critical component in addressing this issue. While traditional ventilators cost 
-            between $25,000 to $50,000 each and weigh hundreds of pounds, the ApolloBVM could be mass produced for 
-            less than $250 and weighs 8 pounds. Since it has 80% of the functionality of a full-size ventilator, it 
-            could be used for the less severely ill. It is also automated, replacing manual pumping which is tiring 
-            and risky for medical professionals.</p>
-
+        <DonateAlert/>
+        <div class="container">
+            <h1>Why is Rice University's ApolloBVM ventilator our best bet?</h1>
+            <figure>
+                <img :src="venti" class="venti"/>
+                <figcaption>early prototype sketch @Claire Xu</figcaption>
+            </figure>
+            <h4>Unsustainable Situations</h4>
+            <p>The country is currently facing a severe shortage of ventilators, a problem that is expected 
+                to escalate as the virus continues to spread and peak in different states across the country. 
+                The Society of Critical Care Medicine has projected that 960,000 Covid-19 patients in the U.S. 
+                may need to be put on ventilators at one point, but the nation has only about 200,000 of these 
+                machines (many of which are older models). The wide gap between supply and demand is already forcing 
+                doctors to choose which patients they can try to save.</p>
+            <h4>The Solution</h4>
+            <p>The ApolloBVM could be a critical component in addressing this issue. While traditional ventilators cost 
+                between $25,000 to $50,000 each and weigh hundreds of pounds, the ApolloBVM could be mass produced for 
+                less than $250 and weighs 8 pounds. Since it has 80% of the functionality of a full-size ventilator, it 
+                could be used for the less severely ill. It is also automated, replacing manual pumping which is tiring 
+                and risky for medical professionals.</p>
+        </div>
     </div>
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
+import DonateAlert from './components/Donate-Alert.vue'
 
 export default {
     name: "ApolloBVM",
     components: {
-        Navbar
+        Navbar,
+        DonateAlert
     },
 
     data () {
@@ -41,9 +45,15 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+}
 
 h1 {
-    padding-top: 4rem;
     font-family: medium-content-title-font, Georgia, Cambria, "Times New Roman", Times, serif;
     font-size: 260%;
     text-align: left;
