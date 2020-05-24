@@ -1,32 +1,18 @@
 <template>
   <header>
-    <img :src="images" alt="lfh-logo" class="logo"/>
+    <img style="min-width: 160px" :src="images" alt="lfh-logo" class="logo"/>
     <nav>
         <ul>
-            <li><a href="/">Orders</a></li>
-            <li><a href="/apollobvm">The ApolloBVM</a></li>
-            <li><a href="/donate">Donate Now!</a></li>
-            <li><a href="#">Terms of use</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="/donate">Donate Now!</a></li>
+          <li><a href="/apollobvm">The ApolloBVM</a></li>
+          <li><a href="/">Home</a></li>
+          <li class="socials"><a href="https://facebook.com" target="_blank"><font-awesome-icon class="icon" :icon="['fab', 'facebook-square']"/></a></li>
+          <li class="socials"><a href="https://facebook.com" target="_blank"><font-awesome-icon class="icon" :icon="['fab', 'instagram']"/></a></li>
+          <li class="socials"><a href="https://facebook.com" target="_blank"><font-awesome-icon class="icon" icon="envelope"/></a></li>
         </ul>
     </nav>
    </header>
-
-<!--
-        <div class="image-holder">
-            <img :src="images" alt="lfh-logo" class="logo"/>
-        </div>
-        <el-menu :default-active="activeIndex" 
-            class="el-menu-demo" 
-            mode="horizontal" 
-            @select="handleSelect"
-            active-text-color="#ffd04b">
-            <el-menu-item index="1"><a href="/">Orders</a></el-menu-item>
-            <el-menu-item index="2"><a href="/apollobvm">The ApolloBVM</a></el-menu-item>
-            <el-menu-item index="3"><a href="/donate">Donate Now!</a></el-menu-item>
-            <el-menu-item index="4"><a href="/contact">Contact Us</a></el-menu-item>
-        </el-menu>
--->
 </template>
 
 <script>
@@ -44,39 +30,55 @@ export default {
 <style scoped>
 
 header img {
-    height: 30px;
-    margin-left: 40px;
+  height: 30px;
+  margin: 15px 20% 15px 5%;
 }
 
 header {
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 0 10px 0 grey;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 10px 0 grey;
 }
 
 header * {
-    display: inline;
+  display: inline;
 }
 
 header li {
-    margin: 20px;
-    padding: 15px 10px 15px 10px;
+  float: right;
+  margin: 10px;
+  padding: 15px 10px;
 }
 
 header li a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 header li:hover {
-  border: 1px solid grey ;
-  border-radius: 10px;
-  padding: 15px 9px 15px 9px;
+border: 2px solid #f5bdbd;
+border-radius: 10px;
+padding: 13px 8px;
+}
+
+.socials {
+  padding: 15px 5px;
+  margin: 10px 5px;
+}
+
+.socials:hover {  
+  border: 0px;
+  padding: 15px 5px;
+}
+
+.icon:hover {
+  color: #f5bdbd;
+  transform:translateY(-2px);
 }
 </style>
