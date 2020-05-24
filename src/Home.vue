@@ -1,4 +1,5 @@
 <template>
+  <div class="container">
     <div class="home"> 
         <div v-if="loading">
             <div class="spinner-wrapper">
@@ -10,6 +11,7 @@
             <h1>HOMEHOME</h1>
         </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -35,9 +37,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
-* {
+.container {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -54,7 +56,7 @@ export default {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
 }

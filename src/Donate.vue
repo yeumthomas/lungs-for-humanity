@@ -1,5 +1,5 @@
 <template>
-    <div container> 
+    <div class="container"> 
         <Navbar/>
         <h1>asdf</h1>
     </div>
@@ -16,3 +16,12 @@ export default {
 }
 </script>
 
+<style scoped>
+.container {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+</style>

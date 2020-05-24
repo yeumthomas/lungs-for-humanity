@@ -9,12 +9,14 @@ import Element from 'element-ui';
 import 'element-ui/lib/theme-chalk/reset.css';
 import 'element-theme-chalk';
 import VueRouter from 'vue-router';
+import BootstrapVue from 'bootstrap-vue'
 
 Vue.use('element-theme-chalk');
 Vue.use(Element, { size: 'small', zIndex: 3000 });
 Vue.use(VueRouter);
+Vue.use(BootstrapVue);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 //Set up Routes
 const routes = [
