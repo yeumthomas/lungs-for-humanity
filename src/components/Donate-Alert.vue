@@ -16,10 +16,9 @@ export default {
 .donate-alert {
     margin-top: 85px;
     max-width: 650px;
-    background-color: rgb(243, 211, 239);
+    background-color: #ffd7d7;
     border-radius: 10px;
-    padding: 10px 14px 10px 14px;
-    max-width: 700px;
+    padding: 10px 0px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
