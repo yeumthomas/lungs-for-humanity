@@ -8,7 +8,7 @@
                 <img :src="venti" class="venti"/>
                 <figcaption>early prototype sketch @Claire Xu</figcaption>
             </figure>
-            <h4>Unsustainable Situations</h4>
+            <h4 style="padding-top: 20px">Unsustainable Situations</h4>
             <p>The country is currently facing a severe shortage of ventilators, a problem that is expected 
                 to escalate as the virus continues to spread and peak in different states across the country. 
                 The Society of Critical Care Medicine has projected that 960,000 Covid-19 patients in the U.S. 
@@ -22,18 +22,21 @@
                 could be used for the less severely ill. It is also automated, replacing manual pumping which is tiring 
                 and risky for medical professionals.</p>
         </div>
+        <Footer />
     </div>
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
 import DonateAlert from './components/Donate-Alert.vue'
+import Footer from './components/Footer.vue'
 
 export default {
     name: "ApolloBVM",
     components: {
         Navbar,
-        DonateAlert
+        DonateAlert,
+        Footer
     },
 
     data () {
@@ -68,8 +71,9 @@ h4 {
     font-size: 200%;
 }
 .venti {
-    width: 15rem;
-    height: auto;
+    width: auto;
+    height: 15rem;
+    min-height: 15rem;
 }
 
 figure {
