@@ -1,6 +1,6 @@
 <template>
   <header>
-    <img style="min-width: 160px" :src="images" alt="lfh-logo" class="logo"/>
+    <a href="/"><img style="min-width: 160px" :src="images" alt="lfh-logo" class="logo"/></a>
     <nav>
         <ul>
           <li><a href="/contact">Contact Us</a></li>
@@ -31,7 +31,7 @@ export default {
 
 header img {
   height: 30px;
-  margin: 15px 20% 15px 5%;
+  margin: 15px 0px 15px 4%;
 }
 
 header {
@@ -42,6 +42,7 @@ header {
   right: 0;
   height: 60px;
   display: flex;
+  justify-content: space-around;
   align-items: center;
   box-shadow: 0 0 10px 0 grey;
 }
@@ -61,10 +62,11 @@ header li a {
   text-decoration: none;
 }
 
-header li:hover {
+header li:hover:active {
 border: 2px solid #f5bdbd;
 border-radius: 10px;
 padding: 13px 8px;
+cursor: pointer; 
 }
 
 .socials {
@@ -75,10 +77,13 @@ padding: 13px 8px;
 .socials:hover {  
   border: 0px;
   padding: 15px 5px;
+  cursor: pointer; 
 }
 
 .icon:hover {
   color: #f5bdbd;
   transform:translateY(-2px);
+  cursor: pointer; 
 }
+
 </style>
