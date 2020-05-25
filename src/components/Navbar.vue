@@ -62,7 +62,7 @@ header li a {
   text-decoration: none;
 }
 
-header li:hover:active {
+header li:hover {
 border: 2px solid #f5bdbd;
 border-radius: 10px;
 padding: 13px 8px;
