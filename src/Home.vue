@@ -1,21 +1,29 @@
 <template>
   <div class="container">
     <div class="home"> 
-        <div v-if="loading">
+        <!-- <div v-if="loading">
             <div class="spinner-wrapper">
                 <div class="spinner-heart"></div>  
             </div>
         </div>
-        <div v-else class="container">
+        <div v-else class="container"> -->
+        <div class="container">
             <Navbar />
-            <h1>HOMEHOME</h1>
+            <Donate />
+            <div class='title'>
+              <h1 class='title-text'>We are Team</h1>
+              <h1 class="title-text">Lungs For Humanity.</h1>
+            </div>
         </div>
+        <Footer />
     </div>
   </div>
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
+import Donate from './components/Donate-Alert.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'Home',
@@ -32,7 +40,9 @@ export default {
   },
   
   components: {
-    Navbar
+    Navbar,
+    Donate,
+    Footer
   }
 }
 </script>
@@ -55,13 +65,10 @@ export default {
   margin-top: 60px;
 }
 
-.container {
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
+.title-text {
+  font-size: 7vh;
+  margin: 5px 5px;
 }
-
-
 /***SPINNER HEART STYLE***/
 .spinner-heart {
   position: absolute;
